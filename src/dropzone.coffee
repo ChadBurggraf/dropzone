@@ -1587,4 +1587,4 @@ contentLoaded = (win, fn) ->
 
 # As a single function to be able to write tests.
 Dropzone._autoDiscoverFunction = -> Dropzone.discover() if Dropzone.autoDiscover
-contentLoaded window, Dropzone._autoDiscoverFunction
+contentLoaded window, Dropzone._autoDiscoverFunction if typeof window isnt "undefined"
